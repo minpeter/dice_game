@@ -13,27 +13,29 @@ class Board:
 
         clear()
 
-        print(f"{self.player.getName()} : ", end="")
+        print("%10s" % self.player.getName() + " : ", end="")
         for i in range(0, 30):
             if i == pPos:
-                print("♟️", end="")
+                print("♟️ ", end="")
             else:
-                print("⬜", end="")
-        print("🎈")
+                print("⬛", end="")
+        print(" 🎈")
 
-        print(f"{self.computer.getName()} : ", end="")
+        print("%10s" % self.computer.getName() + " : ", end="")
         for i in range(0, 30):
             if i == cPos:
-                print("♟️", end="")
+                print("♟️ ", end="")
             else:
-                print("⬜", end="")
-        print("🎈")
+                print("⬛", end="")
+        print(" 🎈")
 
     def evaluate(self):
         if(self.player.getPos() >= 30):
+            clear()
             print("You win!")
             return False
         elif(self.computer.getPos() >= 30):
+            clear()
             print("Computer wins!")
             return False
         else:

@@ -2,8 +2,8 @@ from Player import Player
 from Board import Board
 
 input("Press Enter to start the game...")
-player = Player(str(input("플레이어의 이름을 입력하세요 >> ")))
-computer = Player("컴퓨터")
+player = Player(str(input("Pleas input player name >> ")))
+computer = Player("computer")
 
 board = Board(player, computer)
 
