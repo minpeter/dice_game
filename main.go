@@ -21,7 +21,7 @@ func (p *Player) GetPos() int {
 
 func (p *Player) Move() {
 	rand.Seed(time.Now().UnixNano())
-	p.Pos += rand.Intn(5)
+	p.Pos += rand.Intn(6) + 1
 }
 
 type Board struct {
