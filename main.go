@@ -33,7 +33,7 @@ func (b *Board) PrtBoard() {
 	PPos := b.Player.GetPos()
 	CPos := b.Computer.GetPos()
 
-	//clear()
+	fmt.Print("\033[H\033[2J")
 
 	fmt.Print(b.Player.GetName(), " : ")
 	for i := 0; i <= 30; i++ {
@@ -58,11 +58,15 @@ func (b *Board) PrtBoard() {
 
 func (b *Board) Evaluate() bool {
 	if b.Player.GetPos() >= 30 {
-		//clear()
+
+		fmt.Print("\033[H\033[2J")
+
 		fmt.Println("Player Win!")
 		return false
 	} else if b.Computer.GetPos() >= 30 {
-		//clear()
+
+		fmt.Print("\033[H\033[2J")
+
 		fmt.Println("Computer Win!")
 		return false
 	} else {
